@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Saaketh Balachendil · Product</title>
-<meta name="description" content="Product manager with an engineering foundation. Case studies in secure collaboration, developer tooling, go to market and discovery in the skilled trades."/>
+<meta name="description" content="Technical product manager with an engineering foundation. Case studies in secure collaboration, developer tooling, go to market and discovery in the skilled trades."/>
 <meta property="og:title" content="Saaketh Balachendil · Product"/>
 <meta property="og:description" content="Engineer turned product manager. Case studies in secure collaboration, developer tooling, go to market and discovery in the skilled trades."/>
 <meta property="og:type" content="website"/>
@@ -310,12 +310,75 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
   .grid2{grid-template-columns:1fr;}
   .blk{border-right:none;}
   .prins{grid-template-columns:1fr;}
-  .nav .lnk{display:none;}
   .engrow{flex-direction:column;gap:6px;}
   .engrow .w{width:auto;}
   .case .top,.blk,.arts{padding-left:22px;padding-right:22px;}
   .shot{margin-left:22px;margin-right:22px;}
   .contact{padding:38px 24px;}
+}
+
+/* ================= mobile ================= */
+html,body{overflow-x:hidden;}          /* nothing may cause a sideways scroll */
+img,svg{max-width:100%;height:auto;}
+p,li,h1,h2,h3,h4,.art,figcaption{overflow-wrap:anywhere;}   /* long URLs cannot push the page wide */
+
+/* The two app mockups are fixed-layout UI. Below tablet they scroll sideways
+   inside their own frame rather than being crushed or hidden. */
+.figscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.swipe{display:none;font-size:11.5px;color:var(--muted);margin-top:8px;}
+
+@media (max-width:760px){
+  .nav .wrap{gap:14px;}
+  .nav a.lnk{font-size:13px;}
+  .nav .me{font-size:14px;}
+
+  .figscroll{margin:0 -22px;padding:0 22px;}
+  .figscroll .wf{min-width:560px;}         /* keep proportions, allow the swipe */
+  .swipe{display:block;padding-left:2px;}
+  .wf .nv{display:none;}                   /* drop the secondary nav column */
+
+  .result{gap:20px 26px;}
+  .result .r{min-width:104px;}
+  .callout{font-size:18px;}
+}
+
+@media (max-width:560px){
+  .wrap{padding:0 18px;}
+  .hero{padding:64px 0 52px;}
+  .hero .lede{font-size:17px;}
+  .hero .sub{font-size:14.5px;}
+  section{padding:56px 0;}
+  .shead{margin-bottom:32px;}
+
+  .strip{grid-template-columns:1fr;}       /* one stat per row, nothing cramped */
+  .strip .cellwrap{padding:18px 20px;display:flex;align-items:baseline;gap:12px;}
+  .strip .n{font-size:25px;flex:0 0 auto;}
+  .strip .l{margin-top:0;font-size:13px;}
+
+  .case{border-radius:13px;}
+  .case .top,.blk,.arts{padding-left:18px;padding-right:18px;}
+  .case h3{font-size:23px;}
+  .case .oneline{font-size:15.5px;}
+  .blk{padding-top:20px;padding-bottom:20px;}
+  .figscroll{margin:0 -18px;padding:0 18px;}
+  .fig{margin-left:18px;margin-right:18px;}
+
+  .arts{gap:7px;}
+  .art{padding:9px 13px;}                  /* ~40px tall, thumb friendly */
+  .btn{padding:13px 20px;}
+  .nav .cv{padding:10px 15px;}
+
+  .prin{padding:20px 21px;}
+  .contact{padding:34px 20px;border-radius:14px;}
+  .result .rn{font-size:23px;}
+}
+
+@media (max-width:400px){
+  .nav a.lnk{display:none;}                /* only at the very narrow end */
+  .figscroll .wf{min-width:520px;}
+  .hero h1{font-size:33px;}
+  .case h3{font-size:21px;}
+  .callout{font-size:17px;}
 }
 </style>
 </head>
@@ -339,7 +402,7 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
   <div class="wrap">
     <div class="eyebrow">Product management · Gainesville, Florida</div>
     <h1>I write the requirements,<br/>and I <em>read the pull request</em>.</h1>
-    <p class="lede">Product manager with an engineering foundation. I spent two years shipping production
+    <p class="lede">Technical product manager with an engineering foundation. I spent two years shipping production
       backend, payments and mobile features, then moved to product, where I now own
       <strong>discovery, requirements and go to market</strong>.</p>
     <p class="sub">Most recently at Tvisha Technologies, defining two new modules for Troop Messenger,
@@ -357,7 +420,7 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
   <div class="cellwrap"><div class="n">6 &rarr; 4</div><div class="l">Steps removed from the core user task</div></div>
   <div class="cellwrap"><div class="n">+15%</div><div class="l">30 day retention, 5,000 customers, from A/B testing</div></div>
   <div class="cellwrap"><div class="n">15+</div><div class="l">Discovery interviews that overturned my own thesis</div></div>
-  <div class="cellwrap"><div class="n">180+</div><div class="l">Partner targets qualified across three regions</div></div>
+  <div class="cellwrap"><div class="n">5,000</div><div class="l">Customers on a product live in the App Store and Play Store</div></div>
 </div>
 
 <!-- ================= WORK ================= -->
@@ -385,7 +448,7 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
       </div>
 
             <figure class="fig">
-        <div class="wf" role="img" aria-label="Wireframe: a knowledge search panel opened over a caseworker's live case, showing an answering paragraph with a freshness band and owner">
+        <div class="figscroll"><div class="wf" role="img" aria-label="Wireframe: a knowledge search panel opened over a caseworker's live case, showing an answering paragraph with a freshness band and owner">
           <div class="tb"><b>Troop <i>Messenger</i></b><span class="pill">Case working</span>
             <span>Knowledge <span class="kb">Ctrl K</span></span><span class="cls">OFFICIAL SENSITIVE</span></div>
           <div class="bd">
@@ -444,6 +507,8 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
               <span style="margin-left:auto;">Filtered by your permissions</span></div>
           </div>
         </div>
+        </div>
+        <p class="swipe">Swipe to see the full screen &rarr;</p>
         <figcaption><b>The core screen.</b> Search invoked by shortcut over the case she is already in.
           The result is the answering paragraph, not a list of titles, so most questions never require opening
           the article. The freshness band and owner sit under every result, so she judges trust before she reads.
@@ -566,7 +631,7 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
       </div>
 
             <figure class="fig">
-        <div class="wf ed anim" role="img" aria-label="Animated illustration: a collaborative code editor with two named cursors, one of them typing on the same file, presence avatars and a live connection status bar">
+        <div class="figscroll"><div class="wf ed anim" role="img" aria-label="Animated illustration: a collaborative code editor with two named cursors, one of them typing on the same file, presence avatars and a live connection status bar">
           <span class="animbadge">Animated illustration</span>
           <div class="tb"><b>Jointly <i>Code</i></b><span class="pill">benefits-service</span>
             <span style="font-family:Inter,sans-serif;">Room <span class="kb">rc-4471</span></span>
@@ -605,6 +670,8 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
             </div>
           </div>
         </div>
+        </div>
+        <p class="swipe">Swipe to see the full screen &rarr;</p>
         <figcaption><b>The interaction, animated.</b> Denise types on line 20 while Priya holds line 16.
           Conflict free replicated data types mean there is no central lock and no merge dialog, which matters
           because the whole system runs inside the customer's network with no external service. The status bar
@@ -699,10 +766,13 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
             government and defence buyers. I was asked to build the pipeline from a standing start.</p>
         </div>
         <div class="blk">
-          <h4>What went wrong</h4>
+          <h4>What went wrong, and who told me</h4>
           <p>My VP of Sales reviewed the first lists and found a pattern I had missed. A significant share of my
             targets ran partner programmes designed to recruit <em>us</em> as a reseller of <em>their</em>
             products, which is the reverse of what the business needed.</p>
+          <p>He was senior to me, he was right, and he was blunt about it. The useful part was not taking the
+            correction well. It was working out that he had found a symptom, and that the list was going to keep
+            regenerating itself until someone fixed the filter underneath it.</p>
         </div>
 
         <div class="blk hilite full">
@@ -744,7 +814,7 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
         <div class="meta">
           <span class="chip co">NexSetu</span>
           <span class="chip role">Founder, solo</span>
-          <span class="chip when">2026</span>
+          <span class="chip when">May - Sep 2026</span>
           <span class="chip stat">Thesis retired after discovery</span>
         </div>
         <h3>NexSetu, a product I stopped building</h3>
@@ -850,6 +920,25 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
             alignment and availability, where every result can be explained to the contractor relying on it.</p>
         </div>
 
+        <div class="blk hilite full">
+          <h4>Where the model earned its place, and where it did not</h4>
+          <p class="callout">Retiring the AI matching engine was not a retreat from AI. It was deciding which
+            half of the problem a model is actually good at.</p>
+          <p style="margin-top:14px;">Certification equivalence is a genuine semantic problem. "EPRI Certified
+            Journeyman Lineman" and "NCCER Level 4 Electrical" are neither string-equal nor unrelated, and no
+            lookup table survives contact with fifty states. So that part runs on embeddings: each certification
+            is vectorised once at 4,096 dimensions and stored in pgvector, and match time computes cosine
+            similarity against every held credential. I calibrated the thresholds by hand, full credit above 0.88,
+            proportional partial credit down to 0.70, nothing below. If pgvector is unavailable or the API key is
+            missing, it falls back to deterministic string matching rather than failing the request.</p>
+          <p style="margin-top:14px;">The same applies to input parsing. Job descriptions, resumes and photographed
+            certificates all go through an LLM, and every one of those paths has a regex fallback behind it.</p>
+          <p style="margin-top:14px;">What I would not let a model touch was the ranking. A contractor looking at
+            a shortlist has to be able to ask why this person is third, and get an answer. So the scoring engine
+            above the embeddings is pure and deterministic: interval overlap for pay, Haversine for distance,
+            heap selection for top-K, tunable weights. The model informs one input. It never decides the outcome.</p>
+        </div>
+
         <div class="blk teal">
           <h4>The trade off</h4>
           <p>I eliminated four candidate product directions against consumer reporting law, labor law and fair
@@ -878,6 +967,21 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
           <p style="margin-top:16px;color:var(--muted);font-size:14.5px;">Status: no users, no revenue, thesis
             retired. What I have instead is an evidenced account of how hiring trust actually works in this trade,
             and a habit of finding out before building rather than after.</p>
+        </div>
+
+        <div class="blk full">
+          <h4>What I committed to anyway</h4>
+          <p>Four reversals in six months invites a fair question: does this person investigate instead of
+            deciding? So it is worth being specific about what I did commit to while all that was going on.</p>
+          <p style="margin-top:10px;">I built the entire platform as the only engineer. FastAPI and async
+            SQLAlchemy over PostgreSQL, React 19 and TypeScript, job posting through matching, interview
+            scheduling and post-hire outcome tracking, 63 backend tests, live license verification against the
+            Texas and Florida state boards, semantic matching on pgvector. I shipped a deterministic scoring
+            engine and defended the choice. I published findings under my own name knowing practitioners would
+            read them, and twice they told me publicly I was wrong.</p>
+          <p style="margin-top:10px;">The reversals were not hesitation. Each one was a decision to stop paying
+            for something, made on evidence, and each was followed by building the next version. What I would not
+            do was keep building a thing fifteen people had told me was aimed at the wrong problem.</p>
         </div>
       </div>
 
@@ -949,8 +1053,9 @@ footer{padding:34px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
     <div class="shead rv">
       <div class="tag">Engineering background</div>
       <h2>Two years shipping production systems</h2>
-      <p>The foundation underneath the product work. At Bunderbrains, a startup building a chat based
-        commerce platform for local businesses competing with quick commerce incumbents.</p>
+      <p>The foundation underneath the product work. At Bunderbrains, building misrut, a chat based commerce
+        platform helping local businesses compete with quick commerce incumbents. <b>It is live on the App Store
+        and Play Store.</b> Everything below ran in front of real customers, not in a prototype.</p>
     </div>
     <div class="eng rv">
       <div class="engrow">
